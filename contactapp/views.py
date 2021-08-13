@@ -16,7 +16,7 @@ def addcontact(request):
                 for i in range(len(x)):
                     if x[i]['name']==Name or x[i]['phone']==Phone :
                         responseDic["msg"]="WELCOME"
-                        responseDic["msg2"]="Contact Cannnot be Added, Already Exist"
+                        responseDic["msg2"]="Contact Cannnot be Added, Already Exist!!"
                         return render(request,"index.html",responseDic)
                 contdtls=contact(name=Name,phone=Phone)
                 contdtls.save()
